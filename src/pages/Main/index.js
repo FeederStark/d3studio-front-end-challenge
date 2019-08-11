@@ -31,6 +31,7 @@ class Main extends Component {
           capital: PropTypes.string,
         })
       ),
+      darkMode: PropTypes.bool.isRequired,
     }).isRequired,
   };
 
@@ -64,9 +65,9 @@ class Main extends Component {
     const { countries } = this.props;
     const { name, option } = this.state;
     return (
-      <Container>
+      <Container darkMode={countries.darkMode}>
         <TopBar>
-          <Search>
+          <Search darkMode={countries.darkMode}>
             <input
               placeholder="Search for a country..."
               onChange={this.changeName}
@@ -84,18 +85,18 @@ class Main extends Component {
         </TopBar>
         <Content>
           {countries.data.map(country => (
-            <Country key={country.name}>
+            <Country key={country.name} darkMode={countries.darkMode}>
               <Img src={country.flag} alt="img" />
               <Info>
-                <Name>{country.name}</Name>
-                <Data>
+                <Name darkMode={countries.darkMode}>{country.name}</Name>
+                <Data darkMode={countries.darkMode}>
                   Population:<p>{country.population}</p>
                 </Data>
-                <Data>
+                <Data darkMode={countries.darkMode}>
                   Region:<p>{country.region}</p>
                 </Data>
 
-                <Data>
+                <Data darkMode={countries.darkMode}>
                   Capital:<p>{country.capital}</p>
                 </Data>
               </Info>

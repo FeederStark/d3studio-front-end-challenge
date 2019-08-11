@@ -9,7 +9,7 @@ export function* getCountries(action) {
     if (name === '' && filter === '') {
       const { data } = yield call(
         api.get,
-        '/all?fields=name;flag;region;capital'
+        '/all?fields=name;flag;region;capital;population'
       );
       toast.success('Countries found', {
         position: toast.POSITION.TOP_RIGHT,
@@ -18,7 +18,7 @@ export function* getCountries(action) {
     } else if (name === '') {
       const { data } = yield call(
         api.get,
-        `/region/${filter}?fields=name;flag;region;capital`
+        `/region/${filter}?fields=name;flag;region;capital;population`
       );
       toast.success('Countries found', {
         position: toast.POSITION.TOP_RIGHT,
@@ -27,7 +27,7 @@ export function* getCountries(action) {
     } else if (filter === '') {
       const { data } = yield call(
         api.get,
-        `name/${name}?fields=name;flag;region;capital`
+        `name/${name}?fields=name;flag;region;capital;population`
       );
       toast.success('Countries found', {
         position: toast.POSITION.TOP_RIGHT,
