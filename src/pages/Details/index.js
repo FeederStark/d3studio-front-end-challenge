@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import LeftArrow from '../../assets/images/left-arrow.svg';
 import { Creators as DetailsActions } from '../../store/ducks/details';
 
 import {
