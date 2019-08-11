@@ -10,6 +10,7 @@ import {
   Container,
   InnerBox,
   BackArrow,
+  Icon,
   Wrapper,
   Flag,
   Info,
@@ -66,7 +67,10 @@ class Details extends Component {
       <Container darkMode={countries.darkMode}>
         <InnerBox>
           <BackArrow to="/" darkMode={countries.darkMode}>
-            <img src={LeftArrow} alt="Go back" />
+            <Icon
+              className="fa fa-long-arrow-left"
+              darkMode={countries.darkMode}
+            />
             <p>Back</p>
           </BackArrow>
           <Wrapper>
