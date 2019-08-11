@@ -85,7 +85,11 @@ class Main extends Component {
         </TopBar>
         <Content>
           {countries.data.map(country => (
-            <Country key={country.name} darkMode={countries.darkMode}>
+            <Country
+              key={country.name}
+              darkMode={countries.darkMode}
+              to={`/details/${encodeURIComponent(country.name)}`}
+            >
               <Img src={country.flag} alt="img" />
               <Info>
                 <Name darkMode={countries.darkMode}>{country.name}</Name>
