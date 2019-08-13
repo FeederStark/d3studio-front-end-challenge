@@ -1,68 +1,33 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This is a challenge povided by d3studio, you can find it [here](https://github.com/d3estudio/frontend-challenge)
 
-### `npm start`
+## Starting app
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone/download this repository and run `yarn install`, then run `yarn start`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Considerations about the challenge
 
-### `npm test`
+I decided to use toastify to prompt the user when a message whenever his search was successful or not. I know that this
+might be kinda annoying and I could limit this but I decided to leave the way it is.
+I didn't really like the way I styled the selectbox and left the options in the render. It is now possible to style the
+original select tag so I had to either customize it myself or search for a tool to do it (in which case, I used
+react-select) and, as stated, I did not like the result in the code.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tools used
 
-### `npm run build`
+This is a list of the tools used to make this application.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- styled-components. This is used to style most of the application components.
+- prop-types. Way of making runtime assertions about what type of data a React component requires in order to render properly.
+- axios. We use axios to make the api calls.
+- redux and react-redux. To use a global store and make the flux of data flow better.
+- redux-saga. To make asynchronous calls.
+- eslint. Eslint is used to make the code have a solid pattern.
+- editorconfig. Editorconfig also helps with having a solid pattern between the devs.
+- react-toastify. This is used to prompt successfull/error messages to the user after inserting/removing data.
+- react-select. This is used to style the select box.
+- font-awesome. To get some icons.
+- react-router-dom. To route the pages.
